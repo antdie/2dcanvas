@@ -1,0 +1,31 @@
+Ideas to add
+    more projectile patterns (bounce between enemies, fragmentation effect, multiples in one...)
+    aura/projectile effects like pushback & co
+    ground effects 'torrent.png' as example
+    Bosses with aura/projectile as player
+    store tilemap layers elsewhere as i did with spells to be reusable with an Object.assign() to integrate other waves of enemies on the same map
+    waves/spawn interval rework
+    resolution.js modify to max unzoom on small screen
+
+TODO
+    DONE -> Player
+    DONE -> Control
+    DONE -> Tilemap & Camera
+    DONE -> Terrain & players collision
+    DONE -> Resolution
+    DONE -> Aura (Permanent spell)
+    DONE -> Enemy and AI movement
+    DONE -> UI Health & Sprint
+    DONE -> Damage collision (Aura to enemies + Enemies to players)
+    DONE -> Enemies collision
+    DONE -> Enemy spawn interval
+    DONE -> Score
+    DONE -> Loot
+    DONE -> Enemy boss (+ random permanent buff during the game after killing a boss)
+    DONE -> Projectile (Permanent spell)
+    Find a way to enable GPU acceleration on 2d canvas or port the 2d canvas API functions on a webgl/webgpu context. Or can also use https://github.com/pixijs/pixijs ?
+    Benchmark & improve object pool implementations to avoid garbage collection https://hacks.mozilla.org/2013/05/optimizing-your-javascript-game-for-firefox-os/ https://github.com/getify/deePool https://yonatankra.com/improve-performance-with-object-pool/ https://yonatankra.com/object-pool-use-case/
+    Bitwise optimization https://galactic.ink/journal/2011/11/bitwise-gems-and-other-optimizations/
+    Final refactoring
+    Usable spell ?
+    Multiplayer w/ ratchet-php (check first if it's made on top of php fibers) or amphp/websocket-server (which is made on top of php fibers) or socket.io ?

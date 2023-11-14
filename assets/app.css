@@ -1,0 +1,114 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+    font-family: Verdana, sans-serif;
+}
+
+canvas {
+    max-width: 100%;
+    animation: background 2s infinite;
+    width: 0;
+    height: 0;
+    /*image-rendering: pixelated;*/
+}
+
+@keyframes background {
+    0% { background-color: red; }
+    50% { background-color: firebrick; }
+    100% { background-color: red; }
+}
+
+img {
+    display: none;
+}
+
+button {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    width: 28px;
+    height: 28px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/*#fps {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 50px;*/
+/*    height: 25px;*/
+/*    user-select: none;*/
+/*    font-size: 20px;*/
+/*    font-weight: bold;*/
+/* !*test avec un zindex *!*/
+/*}*/
+
+#countdown {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 125px;
+    height: 39px;
+    transform: translateX(-50%);
+    user-select: none;
+    font-size: 32px;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+#hud {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8px;
+}
+#current_health, #current_sprint {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 25px;
+    border: solid #000 1px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    user-select: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+#current_health div,
+#current_sprint div {
+    position: absolute;
+    background-color: red;
+    width: 250px;
+    height: 25px;
+    transform-origin: left;
+    transition: transform .2s;
+    z-index: -1;
+    border-radius: 4px;
+}
+#current_sprint, #current_sprint div {
+    height: 20px;
+}
+#current_sprint div {
+    background-color: green;
+}
+
+#info {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    padding: 12px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.33);
+    border-radius: 4px 0 0 0;
+}
